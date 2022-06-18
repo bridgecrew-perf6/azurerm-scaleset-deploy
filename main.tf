@@ -25,8 +25,8 @@ resource "azurerm_windows_virtual_machine_scale_set" "ms_common_latest_vmss" {
   name                = var.MS_COMMON_LATEST_SCALESET_NAME
   resource_group_name = azurerm_resource_group.ms_common_latest_rg.name
   location            = azurerm_resource_group.ms_common_latest_rg.location
-  sku                 = "Standard_D8ds_v4"
-  instances           = 4
+  sku                 = "Standard_D2_v2"
+  instances           = 2
   computer_name_prefix = "at"
   admin_password      = var.VM_INSTANCE_ADMIN_PASSWORD
   admin_username      = "WaiBuildAdmin"
@@ -54,9 +54,9 @@ resource "azurerm_windows_virtual_machine_scale_set" "ms_common_latest_vmss" {
   os_disk {
     storage_account_type = "Standard_LRS"
     caching              = "ReadOnly"
-    diff_disk_settings {
-      option = "Local"
-    }
+    # diff_disk_settings {
+    #   option = "Local"
+    # }
   }
 
   network_interface {
