@@ -43,8 +43,14 @@ resource "azurerm_windows_virtual_machine_scale_set" "ms_common_latest_vmss" {
       instances,
     ]
   }
+  source_image_reference {
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "2016-Datacenter-Server-Core"
+    version   = "latest"
+  }
 
-  source_image_id = "/subscriptions/07ca8529-f92b-4aa9-b3b1-2a4a15f624f4/resourceGroups/MS-DevOps-ScaleSets-RG/providers/Microsoft.Compute/galleries/MS.Gallery/images/PC-DMIS-Latest/versions/1.1.0"
+  #source_image_id = "/subscriptions/07ca8529-f92b-4aa9-b3b1-2a4a15f624f4/resourceGroups/MS-DevOps-ScaleSets-RG/providers/Microsoft.Compute/galleries/MS.Gallery/images/PC-DMIS-Latest/versions/1.1.0"
   os_disk {
     storage_account_type = "Standard_LRS"
     caching              = "ReadOnly"
