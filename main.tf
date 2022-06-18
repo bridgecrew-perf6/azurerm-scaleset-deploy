@@ -26,7 +26,7 @@ resource "azurerm_windows_virtual_machine_scale_set" "ms_common_latest_vmss" {
   resource_group_name = azurerm_resource_group.ms_common_latest_rg.name
   location            = azurerm_resource_group.ms_common_latest_rg.location
   sku                 = "Standard_D8ds_v4"
-  instances           = 3
+  instances           = 4
   computer_name_prefix = "at"
   admin_password      = var.VM_INSTANCE_ADMIN_PASSWORD
   admin_username      = "WaiBuildAdmin"
