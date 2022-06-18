@@ -20,6 +20,3 @@ variable "SUBNET_NAME" {
 variable "MS_COMMON_LATEST_SCALESET_NAME" {
   type = string
 }
-variable "MS_NEW_IMAGE_SCALESET_NAME" {
-  type = string
-}
