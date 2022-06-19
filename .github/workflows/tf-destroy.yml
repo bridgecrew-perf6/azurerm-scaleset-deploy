@@ -4,6 +4,7 @@ on: workflow_dispatch
 
 jobs:
   terraform-destroy:
+    name: 'Terraform destroy'
     runs-on: ubuntu-latest
 
     steps:
