@@ -41,6 +41,7 @@ resource "azurerm_windows_virtual_machine_scale_set" "ms_common_latest_vmss" {
       # Ignore changes to instances, because Azure DevOps is going to
       # manage this setting automatically when using the scale set.
       instances,
+      tags,
     ]
   }
   source_image_reference {
